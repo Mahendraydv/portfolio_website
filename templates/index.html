@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>My Portfolio</title>
+    
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    
+
+    <section>
+        <h2>Projects</h2>
+        <div class="portfolio-items">
+            {% for item in portfolio_items %}
+                <div class="portfolio-item">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                    <a href="{{ item.url }}">View Project</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
